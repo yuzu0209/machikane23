@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# machikane23
+2023年度まちかね祭のホームページのレポジトリです。
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 初期設定（windows）
+## gitのインストール
+簡単に言うとファイルを他の人と共有するのに必要なソフト  
+特に仕組みを知らなくても大丈夫だけど、知りたければ[この辺](https://backlog.com/ja/git-tutorial/intro/01/)から
 
-## Available Scripts
+1. [https://git-scm.com/download/win](https://git-scm.com/download/win)にアクセスして、*Click here to download* のリンクをクリックしてダウンロード。
+![](README_imgs/screenshot_git.png)
+2. ダウンロードしたexeファイルを開いてインストールを進める。特にこだわりがなければ右下ボタン連打でOK
+3. 終わったところで、コマンドプロンプトを開いて以下のコマンドを入力
+```
+git --version
+```
+こんな感じでなんかそれっぽいのが出れば成功(数字はタイミングよってまちまち)
+```
+C:\Users\xxxx>git --version
+git version 2.34.1.windows.1
+```
 
-In the project directory, you can run:
+## npmのインストール
+node package manager の略　先人たちが作ってくれた偉大なライブラリの数々をタダで利用できる
+。  
+1.  [https://nodejs.org/ja](https://nodejs.org/ja)にアクセスしてそれっぽいボタンからダウンロード  
+推奨版（左）をダウンロードするのが無難
+![](README_imgs/screenshot_node.png)
 
-### `npm start`
+2. ダウンロードしたexeファイルを開いてインストールを進める。特にこだわりがなければ右下ボタン連打でOK
+3. 終わったところで、コマンドプロンプトを開いて以下のコマンドを入力
+```
+npm --version
+```
+こんな感じでなんかそれっぽいのが出れば成功(数字はタイミングよってまちまち)
+```
+C:\Users\xxxx>npm --version
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+8.11.0
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## レポジトリのクローン
+クラウドに上がってるソースコードを自分のパソコンにダウンロードする作業  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. コマンドプロンプト上で以下のコマンドを実行
+```
+cd 自分の作業したいフォルダ
+git clone https://github.com/tyuujitu/machikane23.git
+cd machikane23
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. 関連パッケージのダウンロード
+```
+npm install
+```
+最後がこんな感じのログになれば成功
+```
+.....
+added 1500 packages, and audited 1501 packages in 16s
 
-### `npm run build`
+240 packages are looking for funding
+  run `npm fund` for details
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6 high severity vulnerabilities
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To address all issues (including breaking changes), run:
+  npm audit fix --force
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Run `npm audit` for details.
 
-### `npm run eject`
+```
+3. branchを切る  
+詳しい説明は適当に調べるか先輩に聞くか...
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+(さっきの続きから)
+```
+git checkout -b dev
+```
+もしくは
+```
+git checkout dev
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# 作業を始める前に
+1. VS Codeで作業フォルダを開く
+2. VS Code上でCtrl+Shift+C　（コマンドプロンプトが開く）
+3. 最新の状況にアップデート
+```
+git pull origin dev
+```  
+（これをしないと他の人と「conflict」と呼ばれるめんどくさい状況になりかねない）  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. 開発サーバー起動
+```
+npn run start
+```
+勝手にブラウザが開くはず。
 
-## Learn More
+5. VS Code上で好きに編集する
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 作業が終わった後
+1. コマンドプロンプト上でCtrl+Cを押してサーバーを止める
+2. 今日書いたソースコードをアップロード
+```
+git add .
+git commit -m "なんか好きなメッセージ"
+git push origin dev
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# トラブルシューティング
+### エラーが出た / 出力がなんか怪しい / よくわかんない
+出力（エラーログ）をコピペして先輩に送り付けましょう
