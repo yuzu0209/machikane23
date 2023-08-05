@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import { Routes, Route } from "react-router-dom"; // 追加
 
-function App() {
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+
+//javascriptのサンプル　本番は消してもよい
+import Sample1 from "./tmp/Sample1";
+import Sample2 from "./tmp/Sample2";
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="/machikanepage/about/" element={ <About /> } />
+    
+
+        <Route path="/tmp/sample1" element={ <Sample1 /> } />
+        <Route path="/tmp/sample2" element={ <Sample2 /> } />
+
+
+      </Routes>
+      <Footer />
     </div>
   );
 }
 
-export default App;

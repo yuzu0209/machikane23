@@ -1,0 +1,9 @@
+footer{
+    position: absolute;
+    margin-top: auto;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: var(--blue2);/* 各変数はApp.css を参照　もちろん普通にカラーコード書いてもOK*/
+
+}

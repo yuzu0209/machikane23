@@ -1,0 +1,7 @@
+header{
+    margin: 0;
+    background-color: var(--blue2);
+}
+header >h1{
+    margin: 0;
+}
