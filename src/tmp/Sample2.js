@@ -9,6 +9,10 @@ export default function Sample2() {
         {
             "name": "ほげふがサークル",
             "description": "なんかやってます。",
+        },
+        {
+            "name": "ぴよサークル",
+            "description": "いろいろやってます。",
         }
     ])
 
