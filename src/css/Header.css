@@ -1,6 +1,7 @@
 header{
     position: fixed;
     top: 0;
+    width: 100%;
     margin: 0;
     background-color: var(--blue2);
 }
@@ -38,6 +39,9 @@ header > h1{
 
 @media screen and (min-width: 600px) {/*PC版*/
     .menu-sp{
+        display: none;
+    }
+    .hamburger{
         display: none;
     }
     .menu-pc{
