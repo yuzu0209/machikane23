@@ -1,7 +1,46 @@
 header{
+    position: fixed;
+    top: 0;
     margin: 0;
     background-color: var(--blue2);
 }
-header >h1{
+header > h1{
     margin: 0;
+}
+.menu-pc{
+    display: none;
+}
+/* ハンバーガーメニュー */
+.hamburger{
+    position: absolute;
+    top: 0;
+    right: 0 ;
+    width: 30px;
+    height: 30px;
+}
+.menu{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color:  var(--blue2);
+    transform-origin: top right;
+    transition-duration: 500ms;
+}
+.menu-opend{
+    transform: scaleY(1);
+    border-radius: 0;
+}
+
+.menu-closed{
+    transform: scaleY(0);
+    /* border-radius: 500px; */
+}
+
+@media screen and (min-width: 600px) {/*PC版*/
+    .menu-sp{
+        display: none;
+    }
+    .menu-pc{
+        display: block;
+    }
 }
