@@ -83,9 +83,10 @@ git checkout dev
 
 
 # 作業を始める前に
-1. VS Codeで作業フォルダを開く
+1. VS Codeで作業フォルダを開く（上記通りであればmachikane23のディレクトリ）
 2. VS Code上でCtrl+Shift+C　（コマンドプロンプトが開く）
 3. 最新の状況にアップデート
+devはブランチ名。
 ```
 git pull origin dev
 ```  
