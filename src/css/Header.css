@@ -73,10 +73,14 @@ header > h1{
     .main{
         margin-top: 80px;
     }
-    .machikane_logo-sp{
+    .machikane_logo-sp.menu-closed{
+        opacity: 0;
+    }
+    .machikane_logo-sp.menu-opend{
         display: block;
         height: 50px;
         margin: 5px;
+        animation: FadeIn 1.0s;
     }
     .machikane_logo-pc{
         display: none;
@@ -100,6 +104,7 @@ header > h1{
     }
     .hamburger img{
         width: 45px;
+        background-color: var(--blue2);
     }
     .menu{
         position: fixed;
@@ -158,7 +163,6 @@ header > h1{
         display: block;
         transform: scaleY(1);
         animation: SlideIn 1.0s;
-        transition-duration: 500ms;
         border: none;
     }
     .menu-parent:hover .menu-child{
@@ -189,10 +193,14 @@ header > h1{
     .main{
         margin-top: 80px;
     }
-    .machikane_logo-sp{
+    .machikane_logo-sp.menu-closed{
+        opacity: 0;
+    }
+    .machikane_logo-sp.menu-opend{
         display: block;
         height: 50px;
         margin: 5px;
+        animation: FadeIn 1.0s;
     }
     .machikane_logo-pc{
         display: none;
@@ -216,6 +224,7 @@ header > h1{
     }
     .hamburger img{
         width: 45px;
+        background-color: var(--blue2);
     }
     .menu{
         position: fixed;
