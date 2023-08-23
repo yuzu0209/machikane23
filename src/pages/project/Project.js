@@ -1,4 +1,4 @@
-import "../css/Project.css"
+import "../../css/Project.css"
 import { Helmet } from "react-helmet";
 export default function Project() {
     return(
