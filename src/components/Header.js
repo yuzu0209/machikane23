@@ -1,7 +1,6 @@
 import { useState } from "react"
 
 import "../css/Header.css"
-import hamburger from "../imgs/hamburger.svg"
 import machikane_logo from "../imgs/machikane_logo.png"
 
 export default function Header() {
@@ -72,7 +71,34 @@ export default function Header() {
                 </div>
             </div>
             <div className="hamburger" onClick={onHamburgerClick}>
-                <img src={hamburger} alt="hamburger"></img>
+                <svg className={`${isHamburgerOpen?"ham-opend":"ham-closed"}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                    <defs>
+                        <style>
+                            {`
+                            .cls-1, .cls-2{
+                                fill:none;
+                            }
+                            .cls-2{
+                                stroke:#000;
+                                stroke-linecap:round;
+                                stroke-linejoin:round;
+                                stroke-width:4px;
+                            }
+                            `}
+                        </style>
+                    </defs>
+                    <title>bars_24</title>
+                    <g id="レイヤー_2" data-name="レイヤー 2">
+                        <g id="Rect_最後透明に_" data-name="Rect（最後透明に）">
+                            <rect class="cls-1" width="48" height="48"/>
+                        </g>
+                        <g id="icon">
+                            <line className="cls-2 first" x1="10" y1="12" x2="38" y2="12"/>
+                            <line className="cls-2 second" x1="10" y1="24" x2="38" y2="24"/>
+                            <line className="cls-2 third" x1="10" y1="36" x2="38" y2="36"/>
+                        </g>
+                    </g>
+                </svg>
             </div>
         </header>
     )

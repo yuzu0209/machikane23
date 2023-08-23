@@ -34,6 +34,7 @@ header > h1{
 }
 .menu li, .menu ul{
     list-style: none;
+    margin-right: 10px;
 }
 .menu-title{
     font-size: 1rem;
@@ -102,9 +103,31 @@ header > h1{
         margin-right: 20px;
         margin-top: 5px;
     }
-    .hamburger img{
+    .hamburger svg{
         width: 45px;
         background-color: var(--blue2);
+    }
+    .hamburger svg.ham-opend .first{
+        transform: translate(15px, 1px) rotate(45deg);
+        transition-duration: 200ms;
+    }
+    .hamburger svg.ham-opend .second{
+        opacity: 0;
+    }
+    .hamburger svg.ham-opend .third{
+        transform: translate(-18px, 18px) rotate(-45deg);
+        transition-duration: 200ms;
+    }
+    .hamburger svg.ham-closed .first{
+        transform: translate(0px, 0px) rotate(0deg);
+        transition-duration: 200ms;
+    }
+    .hamburger svg.ham-closed .second{
+        opacity: 1;
+    }
+    .hamburger svg.ham-closed .third{
+        transform: translate(0px, 0px) rotate(0deg);
+        transition-duration: 200ms;
     }
     .menu{
         position: fixed;
@@ -222,7 +245,7 @@ header > h1{
         margin-right: 20px;
         margin-top: 5px;
     }
-    .hamburger img{
+    .hamburger svg{
         width: 45px;
         background-color: var(--blue2);
     }
