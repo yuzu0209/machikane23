@@ -37,7 +37,7 @@ export default function Header() {
                         <li className="menu-parent"><span className={`menu-title ${isMenuOpenA?"is-opend":"is-closed"}`} onClick={menuOpenA}>まちかね祭について</span>
                             <ul className={`menu-child ${isMenuOpenA?"is-opend":"is-closed"}`}>
                                 <li><a href="/about">まちかね祭とは</a></li>
-                                <li><a href="/thema">テーマ</a></li>
+                                <li><a href="/theme">テーマ</a></li>
                                 <li><a href="/">グッズ</a></li>
                                 <li><a href="/">ご挨拶</a></li>
                                 <li><a href="/">ご協賛</a></li>
