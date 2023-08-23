@@ -1,4 +1,4 @@
-import "../css/About.css"
+import "../../css/About.css"
 import { Helmet } from "react-helmet";
 export default function About() {
     return(
