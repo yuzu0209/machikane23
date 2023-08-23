@@ -38,33 +38,33 @@ export default function Header() {
                             <ul className={`menu-child ${isMenuOpenA?"is-opend":"is-closed"}`}>
                                 <li><a href="/about">まちかね祭とは</a></li>
                                 <li><a href="/theme">テーマ</a></li>
-                                <li><a href="/">グッズ</a></li>
-                                <li><a href="/">ご挨拶</a></li>
-                                <li><a href="/">ご協賛</a></li>
+                                <li><a href="/goods">グッズ</a></li>
+                                <li><a href="/greeting">ご挨拶</a></li>
+                                <li><a href="/sponsor">ご協賛</a></li>
                             </ul>
                         </li>
                         <li className="menu-parent"><span className={`menu-title ${isMenuOpenB?"is-opend":"is-closed"}`} onClick={menuOpenB}>企画について</span>
                             <ul className={`menu-child ${isMenuOpenB?"is-opend":"is-closed"}`}>
-                                <li><a href="/">企画区分について</a></li>
-                                <li><a href="/project">企画検索</a></li>
-                                <li><a href="/">ステージタイムテーブル</a></li>
-                                <li><a href="/">ラリー企画一覧</a></li>
-                                <li><a href="/">委員会企画</a></li>
-                                <li><a href="/">研究室紹介</a></li>
+                                <li><a href="/sections">企画区分について</a></li>
+                                <li><a href="/project-search">企画検索</a></li>
+                                <li><a href="/timetable">ステージタイムテーブル</a></li>
+                                <li><a href="/ralley">ラリー企画一覧</a></li>
+                                <li><a href="/official-project">委員会企画</a></li>
+                                <li><a href="/lab-open">研究室紹介</a></li>
                             </ul>
                         </li>
                         <li className="menu-parent"><span className={`menu-title ${isMenuOpenC?"is-opend":"is-closed"}`} onClick={menuOpenC}>来場者の方へ</span>
                             <ul className={`menu-child ${isMenuOpenC?"is-opend":"is-closed"}`}>
-                                <li><a href="/">注意事項</a></li>
-                                <li><a href="/">公式パンフレット</a></li>
-                                <li><a href="/">よくあるご質問</a></li>
-                                <li><a href="/">お問い合わせ</a></li>
+                                <li><a href="/notes">注意事項</a></li>
+                                <li><a href="/pamphlet">公式パンフレット</a></li>
+                                <li><a href="/FAQ">よくあるご質問</a></li>
+                                <li><a href="/inquiry">お問い合わせ</a></li>
                             </ul>
                         </li>
                         <li className="menu-parent"><span className={`menu-title ${isMenuOpenD?"is-opend":"is-closed"}`} onClick={menuOpenD}>アクセス・マップ</span>
                             <ul className={`menu-child ${isMenuOpenD?"is-opend":"is-closed"}`}>
-                                <li><a href="/">アクセス</a></li>
-                                <li><a href="/">マップ</a></li>
+                                <li><a href="/access">アクセス</a></li>
+                                <li><a href="/map">マップ</a></li>
                             </ul>
                         </li>
                     </ul>
