@@ -8,43 +8,321 @@ header{
 header > h1{
     margin: 0;
 }
-.menu-pc{
+.main{
+    margin-top: 80px;
+}
+.machikane_logo-pc{
+    display: block;
+    height: 50px;
+    margin: 5px;
+}
+.machikane_logo-sp{
     display: none;
 }
-/* ハンバーガーメニュー */
-.hamburger{
-    position: absolute;
-    top: 0;
-    right: 0 ;
-    width: 30px;
-    height: 30px;
+.header{
+    display: flex;
 }
+.header>a.top-link{
+    margin-right: auto;
+}
+/* メニュー */
 .menu{
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 7.5%;
     background-color:  var(--blue2);
-    transform-origin: top right;
-    transition-duration: 500ms;
 }
-.menu-opend{
-    transform: scaleY(1);
-    border-radius: 0;
+.menu li, .menu ul{
+    list-style: none;
+    margin-right: 10px;
+}
+.menu-title{
+    font-size: 1rem;
+}
+.menu-grandparent{
+    display: flex;
+}
+.menu-parent{
+    width: 250px;
+}
+.menu-child{
+    display: none;
+}
+.menu-parent:hover .menu-child{
+    display: block;
+    background : #BFF3FF;
+	border-style : solid;
+	border-color : #0071BC;
+	border-width : 1px;
+    animation: FadeIn 0.8s;
+}
+@keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+
+    }
+}
+.hamburger{
+    display: none;
 }
 
-.menu-closed{
-    transform: scaleY(0);
-    /* border-radius: 500px; */
-}
-
-@media screen and (min-width: 600px) {/*PC版*/
-    .menu-sp{
+/*以下スマホ用*/
+@media screen and (max-width:490px){
+    .main{
+        margin-top: 80px;
+    }
+    .machikane_logo-sp.menu-closed{
+        opacity: 0;
+    }
+    .machikane_logo-sp.menu-opend{
+        display: block;
+        height: 50px;
+        margin: 5px;
+        animation: FadeIn 1.0s;
+    }
+    .machikane_logo-pc{
         display: none;
+    }
+    .header>a.top-link{
+        margin-right: 0px;
+    }
+    /* ハンバーガーメニュー */
+    .menu-grandparent{
+        display:block;
     }
     .hamburger{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0 ;
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+    .hamburger svg{
+        width: 45px;
+        background-color: var(--blue2);
+    }
+    .hamburger svg.ham-opend .first{
+        transform: translate(15px, 1px) rotate(45deg);
+        transition-duration: 200ms;
+    }
+    .hamburger svg.ham-opend .second{
+        opacity: 0;
+    }
+    .hamburger svg.ham-opend .third{
+        transform: translate(-18px, 18px) rotate(-45deg);
+        transition-duration: 200ms;
+    }
+    .hamburger svg.ham-closed .first{
+        transform: translate(0px, 0px) rotate(0deg);
+        transition-duration: 200ms;
+    }
+    .hamburger svg.ham-closed .second{
+        opacity: 1;
+    }
+    .hamburger svg.ham-closed .third{
+        transform: translate(0px, 0px) rotate(0deg);
+        transition-duration: 200ms;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 40%;
+        background-color:  var(--blue2);
+        transform-origin: top right;
+        transition-duration: 500ms;
+        overflow-y: scroll;
+    }
+    .menu-opend{
+        transform: scaleY(1);
+        border-radius: 0;
+    }
+    .menu-closed{
+        transform: scaleY(0);
+    }
+    .menu-title.is-closed::after{ /*下向き矢印*/
+        content: "";
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        transform: rotate(-135deg) translateY(9px);
+        position: relative;
+        right: -1px;
+        top: 4px;
+    }
+    .menu-title.is-opend::after{ /*上向き矢印*/
+        content: "";
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg) translateY(-10px);
+        position: relative;
+        right: 0px;
+        top: 10px;
+    }
+    .menu-parent{
+        width: auto;
+    }
+    .menu-child{
+        display: block;
+        font-size: 1rem;
+        height: auto;
+    }
+    .menu-child.is-closed{
+        opacity: 0;
+        line-height: 0;
+        transform: scaleY(0);
+    }
+    .menu-child.is-opend{
+        display: block;
+        transform: scaleY(1);
+        animation: SlideIn 1.0s;
+        border: none;
+    }
+    .menu-parent:hover .menu-child{
+        display: block;
+        background-color: transparent;
+        border: none;
+    }
+    .menu-parent:hover .menu-child.is-opend{
+        display: block;
+        background-color: transparent;
+        border: none;
+        animation: SlideIn 0.8s;
+    }
+    @keyframes SlideIn {
+        0% {
+          opacity: 0;/*初期状態では透明に*/
+          transform: translateX(-30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+    }
+}
+
+/*iPadとか*/
+@media screen and (min-width:490px) and (max-width: 990px){
+    .main{
+        margin-top: 80px;
+    }
+    .machikane_logo-sp.menu-closed{
+        opacity: 0;
+    }
+    .machikane_logo-sp.menu-opend{
+        display: block;
+        height: 50px;
+        margin: 5px;
+        animation: FadeIn 1.0s;
+    }
+    .machikane_logo-pc{
         display: none;
     }
-    .menu-pc{
+    .header>a.top-link{
+        margin-right: 0px;
+    }
+    /* ハンバーガーメニュー */
+    .menu-grandparent{
+        display:block;
+    }
+    .hamburger{
         display: block;
+        position: absolute;
+        top: 0;
+        right: 0 ;
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+    .hamburger svg{
+        width: 45px;
+        background-color: var(--blue2);
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 40%;
+        background-color:  var(--blue2);
+        transform-origin: top right;
+        transition-duration: 500ms;
+        overflow-y: scroll;
+    }
+    .menu-opend{
+        transform: scaleY(1);
+        border-radius: 0;
+    }
+    .menu-closed{
+        transform: scaleY(0);
+    }
+    .menu-title.is-closed::after{ /*下向き矢印*/
+        content: "";
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        transform: rotate(-135deg) translateY(9px);
+        position: relative;
+        right: -1px;
+        top: 4px;
+    }
+    .menu-title.is-opend::after{ /*上向き矢印*/
+        content: "";
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg) translateY(-10px);
+        position: relative;
+        right: 0px;
+        top: 10px;
+    }
+    .menu-child{
+        display: block;
+        font-size: 1rem;
+        height: auto;
+    }
+    .menu-child.is-closed{
+        opacity: 0;
+        line-height: 0;
+        transform: scaleY(0);
+    }
+    .menu-child.is-opend{
+        display: block;
+        animation: SlideIn 1.0s;
+        border: none;
+    }
+    .menu-parent:hover .menu-child{
+        display: block;
+        background-color: transparent;
+        border: none;
+    }
+    .menu-parent:hover .menu-child.is-opend{
+        display: block;
+        background-color: transparent;
+        border: none;
+        animation: SlideIn 0.8s;
+    }
+    @keyframes SlideIn {
+        0% {
+          opacity: 0;/*初期状態では透明に*/
+          transform: translateX(-30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
     }
 }

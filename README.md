@@ -72,7 +72,7 @@ Run `npm audit` for details.
 3. branchを切る  
 詳しい説明は適当に調べるか先輩に聞くか...
 
-(さっきの続きから)
+(さっきの続きから)dev=ブランチ名
 ```
 git checkout -b dev
 ```
@@ -83,9 +83,10 @@ git checkout dev
 
 
 # 作業を始める前に
-1. VS Codeで作業フォルダを開く
+1. VS Codeで作業フォルダを開く（上記通りであればmachikane23のディレクトリ）
 2. VS Code上でCtrl+Shift+C　（コマンドプロンプトが開く）
 3. 最新の状況にアップデート
+devはブランチ名。
 ```
 git pull origin dev
 ```  
@@ -93,11 +94,11 @@ git pull origin dev
 
 4. 開発サーバー起動
 ```
-npn run start
+npm run start
 ```
 勝手にブラウザが開くはず。
 
-5. VS Code上で好きに編集する
+5. VS Code上で先ほど開いたディレクトリを開き、好きに編集する
 
 # 作業が終わった後
 1. コマンドプロンプト上でCtrl+Cを押してサーバーを止める

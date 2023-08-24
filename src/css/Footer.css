@@ -2,8 +2,41 @@ footer{
     position: absolute;
     margin-top: auto;
     bottom: 0;
-    height: 100px;
+    height: auto;
     width: 100%;
     background-color: var(--blue2);/* 各変数はApp.css を参照　もちろん普通にカラーコード書いてもOK*/
-
+}
+.logo{
+    text-align: center;
+}
+.machikane_logo{
+    height: 50px;
+    margin: 5px;
+}
+.sns{
+    display: flex;
+    justify-content: center;
+}
+.snsLink{
+    text-decoration: none;
+}
+.X{
+    display: block;
+    color: white;
+    text-align: center;
+    background-color: black;
+    font-size: 1.8rem;
+    height: 2.3rem;
+    width: 2.3rem;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.insta{
+    width: 3rem;
+}
+.external-site{
+    text-align: center;
+}
+.tyuujitu{
+    text-align: center;
 }
