@@ -7,7 +7,7 @@ export default function FAQ() {
         </Helmet>
             <h2>ここにFAQページ</h2>
             <p>pages/FAQ.jsとcss/~.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

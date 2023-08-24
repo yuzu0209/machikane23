@@ -8,7 +8,7 @@ export default function About() {
         </Helmet>
             <h2>ここにaboutページ</h2>
             <p>pages/About.jsとcss/About.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

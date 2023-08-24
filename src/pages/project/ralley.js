@@ -7,7 +7,7 @@ export default function Ralley() {
         </Helmet>
             <h2>ここにralleyページ</h2>
             <p>pages/Ralley.jsとcss/~.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

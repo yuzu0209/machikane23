@@ -7,7 +7,7 @@ export default function OfficialProject() {
         </Helmet>
             <h2>ここにofficial-projectページ</h2>
             <p>pages/OfficialProject.jsとcss/~.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

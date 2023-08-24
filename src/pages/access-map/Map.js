@@ -7,7 +7,7 @@ export default function Map() {
         </Helmet>
             <h2>ここにmapページ</h2>
             <p>pages/Map.jsとcss/~.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

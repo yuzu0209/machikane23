@@ -7,7 +7,7 @@ export default function LabOpen() {
         </Helmet>
             <h2>ここにlab-openページ</h2>
             <p>pages/LabOpen.jsとcss/~.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

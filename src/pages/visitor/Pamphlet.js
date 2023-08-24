@@ -7,7 +7,7 @@ export default function Pamphlet() {
         </Helmet>
             <h2>ここにpamphletページ</h2>
             <p>pages/Pamphlet.jsとcss/~.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

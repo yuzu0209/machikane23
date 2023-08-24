@@ -7,7 +7,7 @@ export default function Inquiry() {
         </Helmet>
             <h2>ここにinquiryページ</h2>
             <p>pages/Inquiry.jsとcss/~.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

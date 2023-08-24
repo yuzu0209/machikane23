@@ -7,7 +7,7 @@ export default function Timetable() {
         </Helmet>
             <h2>ここにタイムテーブルページ</h2>
             <p>pages/Timetable.jsとcss/~.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

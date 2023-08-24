@@ -7,7 +7,7 @@ export default function Sponsor() {
         </Helmet>
             <h2>ここにsponsorページ</h2>
             <p>pages/Sponsor.jsとcss/~.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

@@ -7,7 +7,7 @@ export default function Theme() {
         </Helmet>
             <h2>ここにthemaページ</h2>
             <p>pages/Thema.jsとcss/~.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

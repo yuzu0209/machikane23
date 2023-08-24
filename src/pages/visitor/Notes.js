@@ -7,7 +7,7 @@ export default function Notes() {
         </Helmet>
             <h2>ここにnotesページ</h2>
             <p>pages/Notes.jsとcss/~.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

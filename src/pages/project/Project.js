@@ -8,7 +8,7 @@ export default function Project() {
         </Helmet>
             <h2>ここにproject-searchページ</h2>
             <p>pages/Project.jsとcss/Project.cssを編集</p>
-            <a href="/">トップページへ戻る</a>
+            <a href="./">トップページへ戻る</a>
         </div>
     )
 }

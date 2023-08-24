@@ -7,7 +7,7 @@ export default function Home() {
           <title>トップページ|まちかね祭2023</title>
         </Helmet>
             <h2>ここにトップページ</h2>
-            <a href="/about">About ページ</a>
+            <a href="./about">About ページ</a>
         </div>
     )
 }
