@@ -90,7 +90,7 @@ export default function Header() {
                     <title>bars_24</title>
                     <g id="レイヤー_2" data-name="レイヤー 2">
                         <g id="Rect_最後透明に_" data-name="Rect（最後透明に）">
-                            <rect class="cls-1" width="48" height="48"/>
+                            <rect className="cls-1" width="48" height="48"/>
                         </g>
                         <g id="icon">
                             <line className="cls-2 first" x1="10" y1="12" x2="38" y2="12"/>

@@ -6,7 +6,7 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter basename='/test/new/machikane23/build/'> {/* 本番環境のサブディレクトリ名を入れる */}
+  <BrowserRouter basename={process.env.REACT_APP_BASENAME}> 
     <React.StrictMode>
       <App />
     </React.StrictMode>

@@ -1,0 +1,10 @@
+.pickup-keyword-container{
+    display: flex;
+}
+.pickup-keyword{
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 3px;
+    height: 30px;
+    width: 80px;
+}
